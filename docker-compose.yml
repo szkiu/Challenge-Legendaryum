@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: challenge-legendaryum-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    environment:
+      REDIS_URL: "redis:6379"
+
+  redis:
+    image: "redis"
+    container_name: challenge-legendaryum-redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--notify-keyspace-events", "Ex"]

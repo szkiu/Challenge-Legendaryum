@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "redis",
+      "socket.io",
+      "express"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
