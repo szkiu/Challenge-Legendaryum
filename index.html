@@ -9,13 +9,29 @@
   <body>
     <button onclick="deleteCoin()">delete coin</button>
 
+    <input placeholder="CoinId" id="input-coin" type="text">
+
+    <br/>
+
+    <button onclick="changeRoom()">change room</button>
+
+    <input placeholder="Room" id="room" type="text">
+
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
     <script>
       function deleteCoin() {
         socket.emit(
           "coinCollected",
-          "bdf0d486-9c2a-4388-a9b3-bcd5efacdd2b",
+          //cambiar este id, por el deseado para eliminar una coin
+          document.getElementById("input-coin").value,
           "room1"
+        );
+      }
+
+      function changeRoom() {
+        socket.emit(
+          "joinRoom",
+          document.getElementById("room").value || "room1"
         );
       }
 

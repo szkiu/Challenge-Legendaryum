@@ -10,3 +10,5 @@ Otra para listar todas las monedas de una room, que seria asi la ruta: /api/coin
 
 Y la ultima para poder ver cuantas monedas hay por sala, solo la cantidad: /api/coins/:room/count
 
+Tambien cuenta con un archivo 'index.html', para poder probar como funciona con Socket.io, en la que te va a mostrar en la consola, la room en la que entras, las coins de esa room, y hay un boton para borrar una coin y un input para ingresar el id, cuando se borra una coin, aparece en la consola, se puede hacer lo mismo con para cambiar de rooms.
+
