@@ -1,7 +1,8 @@
 const API_PORT = Number(process.env.API_PORT) || 3000;
 const REDIS_HOST = process.env.REDIS_HOST || "redis";
 const REDIS_PORT = Number(process.env.REDIS_PORT) || 6379;
-const ORIGIN_1 = process.env.ORIGIN_1 || "http://127.0.0.1:5500";
+const ORIGIN_1 = process.env.ORIGIN_1 || "http://127.0.0.1:3000";
+const ORIGIN_2 = process.env.ORIGIN_1 || "http://localhost:3000";
 
 export const config = {
   api: {
@@ -11,5 +12,5 @@ export const config = {
     host: REDIS_HOST,
     port: REDIS_PORT,
   },
-  whitelist: [ORIGIN_1],
+  whitelist: [ORIGIN_1, ORIGIN_2],
 };
